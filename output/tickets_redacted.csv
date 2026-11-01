@@ -1,0 +1,51 @@
+ticket_id,channel,message
+T001,phone,[NAME] reports: update phone number. Ref 6507529170342.
+T002,email,[NAME] reports: account locked. Reach me at [EMAIL]. Phone [PHONE]. Ref 6563212233079.
+T003,phone,[NAME] reports: change delivery address. Reach me at [EMAIL]. My ID is [SA_ID].
+T004,chat,[NAME] reports: account locked.
+T005,phone,[NAME] reports: refund not received. Reach me at [EMAIL]. Phone [PHONE]. My ID is [SA_ID]. Ref 1177774121547.
+T006,chat,[NAME] reports: double charge. Reach me at [EMAIL]. Phone [PHONE]. My ID is [SA_ID].
+T007,email,[NAME] reports: double charge. Reach me at [EMAIL].
+T008,email,[NAME] reports: account locked. Phone [PHONE].
+T009,phone,[NAME] reports: double charge. Phone [PHONE]. My ID is [SA_ID].
+T010,chat,[NAME] reports: account locked. Phone [PHONE].
+T011,email,[NAME] reports: account locked. Phone [PHONE]. Card [CARD].
+T012,email,[NAME] reports: update phone number.
+T013,email,[NAME] reports: change delivery address. Reach me at [EMAIL]. My ID is [SA_ID]. Card [CARD].
+T014,phone,[NAME] reports: card declined. Reach me at [EMAIL]. Phone [PHONE]. Card [CARD].
+T015,chat,[NAME] reports: double charge. Reach me at [EMAIL]. Ref 6134125242731.
+T016,email,[NAME] reports: card declined. My ID is [SA_ID].
+T017,phone,[NAME] reports: change delivery address. Reach me at [EMAIL]. Phone [PHONE]. Ref 3114402426462.
+T018,email,[NAME] reports: double charge. Reach me at [EMAIL]. Phone [PHONE]. My ID is [SA_ID]. Card [CARD].
+T019,phone,[NAME] reports: change delivery address. Reach me at [EMAIL].
+T020,chat,[NAME] reports: change delivery address. Reach me at [EMAIL]. Phone [PHONE]. Ref 7167868433532.
+T021,chat,[NAME] reports: refund not received. Phone [PHONE]. Card [CARD].
+T022,phone,[NAME] reports: change delivery address. Reach me at [EMAIL]. Phone [PHONE]. Ref 8014126906044.
+T023,chat,[NAME] reports: refund not received. Reach me at [EMAIL].
+T024,chat,[NAME] reports: account locked. Reach me at [EMAIL]. Phone [PHONE]. Ref 8890931002516.
+T025,phone,[NAME] reports: refund not received. Ref 1881817414333.
+T026,phone,[NAME] reports: account locked. Reach me at [EMAIL]. Phone [PHONE]. Ref 2544992070741.
+T027,chat,[NAME] reports: update phone number. Reach me at [EMAIL]. Phone [PHONE]. My ID is [SA_ID].
+T028,chat,[NAME] reports: account locked. Reach me at [EMAIL]. My ID is [SA_ID].
+T029,chat,[NAME] reports: update phone number. Reach me at [EMAIL]. Phone [PHONE].
+T030,phone,[NAME] reports: account locked. Reach me at [EMAIL]. Phone [PHONE]. Ref 5166915640410.
+T031,phone,[NAME] reports: update phone number. Phone [PHONE]. My ID is [SA_ID].
+T032,email,[NAME] reports: update phone number. Reach me at [EMAIL]. My ID is [SA_ID]. Card [CARD]. Ref 2138783757628.
+T033,email,[NAME] reports: refund not received. Reach me at [EMAIL]. Phone [PHONE]. My ID is [SA_ID].
+T034,email,[NAME] reports: change delivery address. Reach me at [EMAIL]. Phone [PHONE].
+T035,phone,[NAME] reports: card declined. Reach me at [EMAIL]. Phone [PHONE].
+T036,phone,[NAME] reports: refund not received. Reach me at [EMAIL]. My ID is [SA_ID].
+T037,phone,[NAME] reports: update phone number. My ID is [SA_ID].
+T038,email,[NAME] reports: change delivery address.
+T039,chat,[NAME] reports: change delivery address. Reach me at [EMAIL]. Phone [PHONE]. Ref 5378383064003.
+T040,email,[NAME] reports: update phone number. Reach me at [EMAIL]. Ref 5656304813734.
+T041,email,[NAME] reports: account locked. Reach me at [EMAIL]. Ref 6092603092600.
+T042,chat,[NAME] reports: account locked.
+T043,chat,[NAME] reports: card declined.
+T044,chat,[NAME] reports: account locked. Reach me at [EMAIL]. Phone [PHONE].
+T045,email,[NAME] reports: refund not received. Reach me at [EMAIL]. Phone [PHONE].
+T046,phone,[NAME] reports: account locked. Reach me at [EMAIL]. Phone [PHONE]. Ref 9045440910317.
+T047,chat,[NAME] reports: account locked. Card [CARD]. Ref 2361078852611.
+T048,email,[NAME] reports: refund not received. Reach me at [EMAIL]. Ref 7938144494544.
+T049,email,[NAME] reports: card declined. Reach me at [EMAIL]. Phone [PHONE].
+T050,phone,[NAME] reports: refund not received. My ID is [SA_ID]. Ref 4310399315827.

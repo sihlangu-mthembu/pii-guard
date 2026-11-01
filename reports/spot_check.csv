@@ -1,0 +1,11 @@
+ticket_id,channel,message,reviewer_ok (Y/N),reviewer_note
+T009,phone,[NAME] reports: double charge. Phone [PHONE]. My ID is [SA_ID].,,
+T037,phone,[NAME] reports: update phone number. My ID is [SA_ID].,,
+T005,phone,[NAME] reports: refund not received. Reach me at [EMAIL]. Phone [PHONE]. My ID is [SA_ID]. Ref 1177774121547.,,
+T017,phone,[NAME] reports: change delivery address. Reach me at [EMAIL]. Phone [PHONE]. Ref 3114402426462.,,
+T008,email,[NAME] reports: account locked. Phone [PHONE].,,
+T032,email,[NAME] reports: update phone number. Reach me at [EMAIL]. My ID is [SA_ID]. Card [CARD]. Ref 2138783757628.,,
+T029,chat,[NAME] reports: update phone number. Reach me at [EMAIL]. Phone [PHONE].,,
+T031,phone,[NAME] reports: update phone number. Phone [PHONE]. My ID is [SA_ID].,,
+T042,chat,[NAME] reports: account locked.,,
+T025,phone,[NAME] reports: refund not received. Ref 1881817414333.,,

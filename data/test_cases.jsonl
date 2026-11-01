@@ -1,0 +1,29 @@
+{"id": "t01", "text": "Customer ID number is 8003130791086, please verify.", "expected": [["SA_ID", "8003130791086"]]}
+{"id": "t02", "text": "Customer ID number is 6409045991087, please verify.", "expected": [["SA_ID", "6409045991087"]]}
+{"id": "t03", "text": "Customer ID number is 9701173517081, please verify.", "expected": [["SA_ID", "9701173517081"]]}
+{"id": "t04", "text": "Customer ID number is 6202146851080, please verify.", "expected": [["SA_ID", "6202146851080"]]}
+{"id": "t05", "text": "ID: 640403 9028 087", "expected": [["SA_ID", "640403 9028 087"]]}
+{"id": "t06", "text": "Call me back on 061 060 9264 after 5pm.", "expected": [["PHONE", "061 060 9264"]]}
+{"id": "t07", "text": "Call me back on 0729703657 after 5pm.", "expected": [["PHONE", "0729703657"]]}
+{"id": "t08", "text": "Call me back on +27 21 642 9551 after 5pm.", "expected": [["PHONE", "+27 21 642 9551"]]}
+{"id": "t09", "text": "Call me back on 072-590-9593 after 5pm.", "expected": [["PHONE", "072-590-9593"]]}
+{"id": "t10", "text": "Send the statement to thabo.60@example.com thanks", "expected": [["EMAIL", "thabo.60@example.com"]]}
+{"id": "t11", "text": "Send the statement to priya.38@example.com thanks", "expected": [["EMAIL", "priya.38@example.com"]]}
+{"id": "t12", "text": "Send the statement to johan.81@example.com thanks", "expected": [["EMAIL", "johan.81@example.com"]]}
+{"id": "t13", "text": "Card ending in 9359: full number 4462819482199359", "expected": [["CARD", "4462819482199359"]]}
+{"id": "t14", "text": "Paid with 4181 9093 7865 7972 yesterday", "expected": [["CARD", "4181 9093 7865 7972"]]}
+{"id": "t15", "text": "Hi, this is Lerato from the Durban branch.", "expected": [["NAME", "Lerato"]]}
+{"id": "t16", "text": "Sipho and Naledi both asked about the refund.", "expected": [["NAME", "Sipho"], ["NAME", "Naledi"]]}
+{"id": "t17", "text": "Zanele: zanele.56@example.org / 082 813 2945", "expected": [["NAME", "Zanele"], ["EMAIL", "zanele.56@example.org"], ["PHONE", "082 813 2945"]]}
+{"id": "t18", "text": "Invoice 3194875749118 is overdue.", "expected": []}
+{"id": "t19", "text": "Your account has a 30-day grace period.", "expected": []}
+{"id": "t20", "text": "Grace Period Notice: your payment is now late.", "expected": []}
+{"id": "t21", "text": "The amount due is R1 250 000 by 31 March 2026.", "expected": []}
+{"id": "t22", "text": "Order reference 6252760189555979 has shipped.", "expected": []}
+{"id": "t23", "text": "Reply to support at example dot com, not by phone.", "expected": []}
+{"id": "t24", "text": "My name is Mandla and I need help.", "expected": [["NAME", "Mandla"]]}
+{"id": "t25", "text": "Mobile: 072 1234 567 (spaced oddly)", "expected": [["PHONE", "072 1234 567"]]}
+{"id": "t26", "text": "Grace from accounts approved it.", "expected": [["NAME", "Grace"]]}
+{"id": "t27", "text": "Contact Bongani on bongani.68@example.com.", "expected": [["NAME", "Bongani"], ["EMAIL", "bongani.68@example.com"]]}
+{"id": "t28", "text": "Spouse ID 6505161064086 attached.", "expected": [["SA_ID", "6505161064086"]]}
+{"id": "t29", "text": "Nothing personal in this message at all.", "expected": []}
