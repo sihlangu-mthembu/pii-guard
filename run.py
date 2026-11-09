@@ -19,7 +19,7 @@ from pii_guard import redact, residual_risks
 ROOT = pathlib.Path(__file__).resolve().parent
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--input", default=ROOT / "data" / "tickets.csv")
     parser.add_argument("--column", default="message")
@@ -31,7 +31,8 @@ def main():
     with open(src, newline="", encoding="utf-8") as fh:
         rows = list(csv.DictReader(fh))
 
-    counts, flagged = Counter(), []
+    counts: Counter[str] = Counter()
+    flagged = []
     for row in rows:
         clean, findings = redact(row[args.column])
         counts.update(kind for kind, *_ in findings)
@@ -50,10 +51,10 @@ def main():
 
     sample = random.Random(args.seed).sample(rows, min(args.sample, len(rows)))
     with open(ROOT / "reports" / "spot_check.csv", "w", newline="", encoding="utf-8") as fh:
-        writer = csv.writer(fh)
-        writer.writerow([*rows[0].keys(), "reviewer_ok (Y/N)", "reviewer_note"])
+        sheet = csv.writer(fh)
+        sheet.writerow([*rows[0].keys(), "reviewer_ok (Y/N)", "reviewer_note"])
         for row in sample:
-            writer.writerow([*row.values(), "", ""])
+            sheet.writerow([*row.values(), "", ""])
 
     lines = ["# Redaction summary", "",
              f"Redacted {sum(counts.values())} items across {len(rows)} rows of `{src.name}`.", "",

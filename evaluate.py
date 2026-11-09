@@ -15,14 +15,16 @@ ROOT = pathlib.Path(__file__).resolve().parent
 TYPES = ["SA_ID", "CARD", "PHONE", "EMAIL", "NAME"]
 
 
-def key(kind, value):
+def key(kind: str, value: str) -> tuple[str, str]:
     """Compare numbers by digits only, everything else exactly."""
     return (kind, re.sub(r"\D", "", value) if kind in ("SA_ID", "CARD", "PHONE") else value)
 
 
-def main():
+def main() -> None:
     cases = [json.loads(line) for line in open(ROOT / "data" / "test_cases.jsonl", encoding="utf-8")]
-    tp, fp, fn = defaultdict(int), defaultdict(int), defaultdict(int)
+    tp: defaultdict[str, int] = defaultdict(int)
+    fp: defaultdict[str, int] = defaultdict(int)
+    fn: defaultdict[str, int] = defaultdict(int)
     errors = []
     for case in cases:
         expected = {key(k, v) for k, v in case["expected"]}
@@ -36,10 +38,10 @@ def main():
             fn[item[0]] += 1
             errors.append((case["id"], "missed", item, case["text"]))
 
-    def ratio(a, b):
+    def ratio(a: int, b: int) -> float | None:
         return a / b if b else None
 
-    def pct(x):
+    def pct(x: float | None) -> str:
         return "n/a" if x is None else f"{x:.0%}"
 
     total_tp, total_fp, total_fn = sum(tp.values()), sum(fp.values()), sum(fn.values())

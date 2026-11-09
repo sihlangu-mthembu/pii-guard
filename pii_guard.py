@@ -10,12 +10,13 @@ Detectors, run in this order so longer numbers are claimed first:
 
 import datetime
 import re
+from typing import Any
 
 DEFAULT_NAMES = ["Thabo", "Lerato", "Sipho", "Naledi", "Johan", "Priya", "Ayesha", "Pieter",
                  "Zanele", "Grace", "Bongani", "Fatima"]
 
 
-def luhn_valid(digits):
+def luhn_valid(digits: str) -> bool:
     """Standard Luhn checksum, used by SA ID numbers and payment cards."""
     total = 0
     for i, ch in enumerate(reversed(digits)):
@@ -28,7 +29,7 @@ def luhn_valid(digits):
     return total % 10 == 0
 
 
-def valid_sa_id(digits):
+def valid_sa_id(digits: str) -> bool:
     if len(digits) != 13 or not luhn_valid(digits):
         return False
     yy, mm, dd = int(digits[0:2]), int(digits[2:4]), int(digits[4:6])
@@ -51,12 +52,12 @@ PATTERNS = [
 ]
 
 
-def detect(text, names=DEFAULT_NAMES):
+def detect(text: str, names: list[str]=DEFAULT_NAMES) -> list[tuple[str, int, int, str] | Any]:
     """Return a list of (type, start, end, value) found in the text, without overlaps."""
     found = []
     taken = [False] * len(text)
 
-    def claim(kind, start, end):
+    def claim(kind: str, start: int, end: int) -> None:
         if any(taken[start:end]):
             return
         for i in range(start, end):
@@ -74,7 +75,7 @@ def detect(text, names=DEFAULT_NAMES):
     return sorted(found, key=lambda f: f[1])
 
 
-def redact(text, names=DEFAULT_NAMES):
+def redact(text: str, names: list[str]=DEFAULT_NAMES) -> tuple[str, list[tuple[str, int, int, str]]]:
     """Replace every detected item with a [TYPE] placeholder. Returns (redacted_text, findings)."""
     findings = detect(text, names)
     out, last = [], 0
@@ -86,7 +87,7 @@ def redact(text, names=DEFAULT_NAMES):
     return "".join(out), findings
 
 
-def residual_risks(text):
+def residual_risks(text: str) -> list[str | Any]:
     """Things a reviewer should look at after redaction: long digit runs and '@' signs."""
     risks = [m.group() for m in re.finditer(r"\d[\d -]{7,}\d", text)]
     if "@" in text:

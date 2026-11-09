@@ -13,6 +13,7 @@ import csv
 import json
 import pathlib
 import random
+from typing import Any
 
 from pii_guard import DEFAULT_NAMES, luhn_valid
 
@@ -20,23 +21,23 @@ ROOT = pathlib.Path(__file__).resolve().parent
 rng = random.Random(7)
 
 
-def luhn_complete(prefix):
+def luhn_complete(prefix: str) -> str:
     for check in "0123456789":
         if luhn_valid(prefix + check):
             return prefix + check
     raise ValueError(prefix)
 
 
-def fake_sa_id():
+def fake_sa_id() -> str:
     yy, mm, dd = rng.randint(60, 99), rng.randint(1, 12), rng.randint(1, 28)
     return luhn_complete(f"{yy:02d}{mm:02d}{dd:02d}{rng.randint(0, 9999):04d}08")
 
 
-def fake_card():
+def fake_card() -> str:
     return luhn_complete("4" + "".join(str(rng.randint(0, 9)) for _ in range(14)))
 
 
-def fake_phone(style):
+def fake_phone(style: str) -> str:
     digits = f"{rng.choice(['72', '82', '83', '61', '11', '21'])}{rng.randint(0, 999):03d}{rng.randint(0, 9999):04d}"
     return {
         "spaced": f"0{digits[:2]} {digits[2:5]} {digits[5:]}",
@@ -46,21 +47,21 @@ def fake_phone(style):
     }[style]
 
 
-def not_luhn(n_digits):
+def not_luhn(n_digits: int) -> str:
     while True:
         s = "".join(str(rng.randint(0, 9)) for _ in range(n_digits))
         if not luhn_valid(s):
             return s
 
 
-def email(name):
+def email(name: str) -> str:
     return f"{name.lower()}.{rng.randint(10, 99)}@{rng.choice(['example.com', 'example.org'])}"
 
 
-def build_test_cases():
-    cases = []
+def build_test_cases() -> list[dict[str, Any]]:
+    cases: list[dict[str, Any]] = []
 
-    def add(text, expected):
+    def add(text: str, expected: list[list[str]]) -> None:
         cases.append({"id": f"t{len(cases) + 1:02d}", "text": text, "expected": expected})
 
     for _ in range(4):
@@ -103,7 +104,7 @@ def build_test_cases():
     return cases
 
 
-def build_tickets():
+def build_tickets() -> list[dict[str, str]]:
     issues = ["refund not received", "card declined", "change delivery address",
               "account locked", "double charge", "update phone number"]
     rows = []
@@ -125,7 +126,7 @@ def build_tickets():
     return rows
 
 
-def main():
+def main() -> None:
     cases = build_test_cases()
     with open(ROOT / "data" / "test_cases.jsonl", "w", encoding="utf-8") as fh:
         for c in cases:
