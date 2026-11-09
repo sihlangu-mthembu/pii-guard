@@ -60,7 +60,7 @@ def main():
               "## Every error", ""]
     if not errors:
         lines.append("None.")
-    for cid, kind, (t, value), text in errors:
+    for cid, kind, (t, _value), text in errors:
         lines.append(f"- **{cid}, {kind} `{t}`:** \"{text}\"")
     lines += ["", "## Why these errors happen", "",
               "- **Names outside the list are missed.** Rule-based name matching only knows the names it is given. "

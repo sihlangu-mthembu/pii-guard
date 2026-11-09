@@ -1,5 +1,7 @@
 # pii-guard
 
+![tests](https://github.com/sihlangu-mthembu/pii-guard/actions/workflows/tests.yml/badge.svg)
+
 A small Python tool that finds and redacts personal information (PII) in text and CSV files, **measures how well it does**, and produces the review material a data-privacy QA process needs: a residual-risk scan and a random spot-check sample.
 
 It is tuned for South African data: it validates SA ID numbers (birth date plus Luhn check digit) and recognises local and +27 phone formats.
